@@ -1,0 +1,6 @@
+.env
+venv
+uploads
+backend/faiss_index
+backend/uploads
+backend/app/wasserstoff_rag_final.py
