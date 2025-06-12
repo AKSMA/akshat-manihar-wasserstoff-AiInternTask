@@ -4,7 +4,7 @@ import pandas as pd
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
-API_URL = "http://localhost:8000/api"  # Update to cloud URL if deployed
+API_URL = "http://0.0.0.0:8000/api"  # Update to cloud URL if deployed
 
 st.set_page_config(page_title="Wasserstoff Gen-AI", layout="wide")
 st.title("📄 Wasserstoff Document Q&A System")
