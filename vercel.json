@@ -10,8 +10,5 @@
       "src": "/backend/app/(.*)",
       "dest": "/backend/app/main.py"
     }
-  ],
-  "env": {
-    "GROQ_API_KEY": "@groq_api_key"
-  }
+  ]
 }
