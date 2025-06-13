@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 import pandas as pd
 import os
+import time
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 API_URL = "http://localhost:8000/api"
