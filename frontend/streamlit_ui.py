@@ -4,7 +4,16 @@ import pandas as pd
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
-API_URL = "http://localhost:8000/api"  # Update to cloud URL if deployed
+API_URL = "http://localhost:8000/api"
+for _ in range(10):
+    try:
+        r = requests.get(f"{API_URL}/ping")  # create a dummy ping endpoint
+        if r.status_code == 200:
+            break
+    except requests.exceptions.ConnectionError:
+        time.sleep(1)
+else:
+    st.error("Backend API not reachable.") # Update to cloud URL if deployed
 
 st.set_page_config(page_title="Wasserstoff Gen-AI", layout="wide")
 st.title("📄 Wasserstoff Document Q&A System")

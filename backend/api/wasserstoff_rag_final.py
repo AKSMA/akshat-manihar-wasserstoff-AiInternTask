@@ -228,7 +228,7 @@ def synthesize_themes(payload: QueryRequest):
             themes.append(Theme(title=title, summary=summary, documents=docs))
 
     return ThemeResponse(themes=themes)
+@app.get("/api/ping")
+def ping():
+    return {"status": "ok"}
 
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=8000)
